@@ -334,7 +334,8 @@
                     Category: document.getElementById('form-category').value,
                     Measure: document.getElementById('form-measure').value,
                     Quantity_Input: parseFloat(document.getElementById('form-quantity').value),
-                    Depot: document.getElementById('form-depot').value
+                    Depot: document.getElementById('form-depot').value,
+                    Evidence: document.getElementById('form-note').value || ""
                 }
             };
 
@@ -392,7 +393,8 @@
                                 Depot: row.Depot || "All",
                                 Category: row.Category || "Jobs & Skills",
                                 Measure: row.Measure || "Unknown",
-                                Quantity_Input: parseFloat(row.Quantity || 0)
+                                Quantity_Input: parseFloat(row.Quantity || 0),
+                                Evidence: row.Evidence ? String(row.Evidence) : ""
                             }
                         };
 
