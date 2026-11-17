@@ -276,11 +276,13 @@
                     if (themeTotals[cat] !== undefined) themeTotals[cat] += sv;
 
                     if(index < 10) {
+                        const evidenceText = fields.Evidence ? `<br><span class="text-gray-400 italic">Evidence: ${fields.Evidence}</span>` : "";
+                        
                         recentList.innerHTML += `
                             <li class="py-3 flex justify-between items-center">
                                 <div>
                                     <p class="text-sm font-medium text-gray-900">${fields.Measure} - ${fields.Depot}</p>
-                                    <p class="text-xs text-gray-500">Qty: ${fields.Quantity_x002f_Input}</p>
+                                    <p class="text-xs text-gray-500">Qty: ${fields.Quantity_x002f_Input} ${evidenceText}</p>
                                 </div>
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">${gbp.format(sv)}</span>
                             </li>`;
