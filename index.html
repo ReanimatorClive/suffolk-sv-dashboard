@@ -267,8 +267,8 @@
 
             items.forEach((item, index) => {
                 const fields = item.fields;
-                if(fields && fields.Measure && fields.Quantity_Input) {
-                    const sv = calculateRowSV(fields.Measure, fields.Quantity_Input);
+                if(fields && fields.Measure && fields.Quantity_x002f_Input) {
+                    const sv = calculateRowSV(fields.Measure, fields.Quantity_x002f_Input);
                     totalSV += sv;
                     
                     let cat = fields.Category || "";
@@ -280,7 +280,7 @@
                             <li class="py-3 flex justify-between items-center">
                                 <div>
                                     <p class="text-sm font-medium text-gray-900">${fields.Measure} - ${fields.Depot}</p>
-                                    <p class="text-xs text-gray-500">Qty: ${fields.Quantity_Input}</p>
+                                    <p class="text-xs text-gray-500">Qty: ${fields.Quantity_x002f_Input}</p>
                                 </div>
                                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">${gbp.format(sv)}</span>
                             </li>`;
